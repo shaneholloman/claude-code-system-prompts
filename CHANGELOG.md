@@ -4,6 +4,13 @@ Note: Only use **NEW:** for entirely new prompt files, NOT for new additions/sec
 
 ### Claude Code System Prompts Changelog
 
+# [2.0.65](https://github.com/Piebald-AI/claude-code-system-prompts/commit/c527901340dda30950eb667af9d7a31d7dcb30ee)
+
+_+97 tokens_
+
+- Agent Prompt: Status line setup - Added `context_window` object to status line data schema with `total_input_tokens`, `total_output_tokens`, and `context_window_size` fields
+- `LSP` tool: Added `goToImplementation` operation; changed line/character documentation from 0-indexed to 1-based
+
 #### [2.0.64](https://github.com/Piebald-AI/claude-code-system-prompts/commit/824243c6fb80fefb4f3ed1d5f6c489df908e0663)
 
 <sub>_No changes to the system prompts in v2.0.64._</sub>
