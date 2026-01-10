@@ -4,6 +4,18 @@ Note: Only use **NEW:** for entirely new prompt files, NOT for new additions/sec
 
 ### Claude Code System Prompts Changelog
 
+# [2.1.3](https://github.com/Piebald-AI/claude-code-system-prompts/commit/3b9438c)
+
+_+1,047 tokens_
+
+- **NEW:** Agent Prompt: Bash command description writer - instructions for generating clear, concise command descriptions in active voice for bash commands
+- **NEW:** Agent Prompt: Bash command explainer - instructions for explaining bash commands with reasoning, risk assessment, and risk level classification
+- **NEW:** Agent Prompt: Remember skill - system prompt for the /remember skill that reviews session memories and updates CLAUDE.local.md with recurring patterns and learnings
+- **REMOVED:** Agent Prompt: Bash command risk classifier - replaced with the new bash command explainer agent
+- Tool Description: Bash - updated description field instructions to provide more context for complex commands (piped commands, obscure flags, etc.) while keeping simple commands brief
+- Tool Description: Bash (Git commit and PR creation instructions) - added warning to never use `git status -uall` flag as it can cause memory issues on large repos
+- Tool Description: Task - updated internal variable references and improved background agent monitoring instructions
+
 # [2.1.2](https://github.com/Piebald-AI/claude-code-system-prompts/commit/25150a99c6a1bc916417476178008dbcfa740aa0)
 
 _-374 tokens_
