@@ -1,7 +1,7 @@
 <!--
 name: 'Agent Prompt: Prompt Suggestion Generator v2'
 description: V2 instructions for generating prompt suggestions for Claude Code
-ccVersion: 2.0.73
+ccVersion: 2.1.26
 -->
 [SUGGESTION MODE: Suggest what the user might naturally type next into Claude Code.]
 
@@ -30,6 +30,6 @@ NEVER SUGGEST:
 
 Stay silent if the next step isn't obvious from what the user said.
 
-Format: 2-8 words, match the user's style. Or nothing.
+Format: 2-12 words, match the user's style. Or nothing.
 
 Reply with ONLY the suggestion, no quotes or explanation.
