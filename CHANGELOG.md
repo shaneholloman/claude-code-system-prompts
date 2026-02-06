@@ -4,6 +4,20 @@ Note: Only use **NEW:** for entirely new prompt files, NOT for new additions/sec
 
 ### Claude Code System Prompts Changelog
 
+# [2.1.33](https://github.com/Piebald-AI/claude-code-system-prompts/commit/38ebc6b)
+
+_-1,086 tokens_
+
+- **NEW:** Agent Prompt: Prompt Suggestion Generator (for Agent Teams) - Instructions for generating prompt suggestions when agent swarms are enabled
+- **NEW:** Tool Description: TeamDelete - Tool description for deleting/cleaning up team resources
+- **REMOVED:** System Prompt: Action Suggestor for the Task Coordinator - Removed system prompt for suggesting actions to the task coordinator
+- **REMOVED:** Tool Description: EnterPlanMode (ambiguous tasks) - Removed separate conditional description for entering plan mode on ambiguous tasks
+- System Reminder: Plan mode is active (5-phase) - Added requirement to begin Phase 4's final plan with a **Context** section explaining why the change is being made
+- System Reminder: Plan mode is active (iterative) - Major rewrite: consolidated variables; restructured from a 5-step "How to Work" section into a streamlined "The Loop" cycle (Explore → Update plan → Ask user); added new "First Turn", "Asking Good Questions", and "When to Converge" sections; reframed as pair-planning with the user; reduced from 909 to 797 tokens
+- Tool Description: EnterPlanMode - Extracted "What Happens in Plan Mode" section into a conditional variable (`CONDITIONAL_WHAT_HAPPENS_NOTE`); reduced from 970 to 878 tokens
+- Tool Description: Task - Removed `AGENT_TEAM_CHECK` variable and conditional note about Agent Teams not being available on certain plans; reduced from 1340 to 1215 tokens
+- Tool Description: TeammateTool - Renamed tool heading from "TeammateTool" to "TeamCreate"; removed `spawnTeam` operation label and `cleanup` operation (now separate TeamDelete tool); added explicit file paths for created team and task list resources; added note about automatic message delivery; updated workflow to reference TeamCreate; reduced from 1790 to 1642 tokens
+
 # [2.1.32](https://github.com/Piebald-AI/claude-code-system-prompts/commit/90253de)
 
 _+2,323 tokens_
