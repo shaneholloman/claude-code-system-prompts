@@ -34,7 +34,7 @@ Download it and try it out for free!  **https://piebald.ai/**
 > [!important]
 > **NEW (January 23, 2026): We've added all of Claude Code's ~40 system reminders to this list&mdash;see [System Reminders](#system-reminders).**
 
-This repository contains an up-to-date list of all Claude Code's various system prompts and their associated token counts as of **[Claude Code v2.1.107](https://www.npmjs.com/package/@anthropic-ai/claude-code/v/2.1.107) (April 13th, 2026).**  It also contains a [**CHANGELOG.md**](./CHANGELOG.md) for the system prompts across 150 versions since v2.0.14.  From the team behind [<img src="https://github.com/Piebald-AI/piebald/raw/main/assets/logo.svg" width="15"> **Piebald.**](https://piebald.ai/)
+This repository contains an up-to-date list of all Claude Code's various system prompts and their associated token counts as of **[Claude Code v2.1.108](https://www.npmjs.com/package/@anthropic-ai/claude-code/v/2.1.108) (April 14th, 2026).**  It also contains a [**CHANGELOG.md**](./CHANGELOG.md) for the system prompts across 151 versions since v2.0.14.  From the team behind [<img src="https://github.com/Piebald-AI/piebald/raw/main/assets/logo.svg" width="15"> **Piebald.**](https://piebald.ai/)
 
 **This repository is updated within minutes of each Claude Code release.  See the [changelog](./CHANGELOG.md), and follow [@PiebaldAI](https://x.com/PiebaldAI) on X for a summary of the system prompt changes in each release.**
 
@@ -87,9 +87,10 @@ Sub-agents and utilities.
 #### Slash Commands
 
 - [Agent Prompt: /batch slash command](./system-prompts/agent-prompt-batch-slash-command.md) (**1106** tks) - Instructions for orchestrating a large, parallelizable change across a codebase.
+- [Agent Prompt: /rename auto-generate session name](./system-prompts/agent-prompt-rename-auto-generate-session-name.md) (**80** tks) - Prompt used by /rename (no args) to auto-generate a kebab-case session name from conversation context.
 - [Agent Prompt: /review-pr slash command](./system-prompts/agent-prompt-review-pr-slash-command.md) (**211** tks) - System prompt for reviewing GitHub pull requests with code analysis.
 - [Agent Prompt: /schedule slash command](./system-prompts/agent-prompt-schedule-slash-command.md) (**2486** tks) - Guides the user through scheduling, updating, listing, or running remote Claude Code agents on cron triggers via the Anthropic cloud API.
-- [Agent Prompt: /security-review slash command](./system-prompts/agent-prompt-security-review-slash-command.md) (**2607** tks) - Comprehensive security review prompt for analyzing code changes with focus on exploitable vulnerabilities.
+- [Agent Prompt: /security-review slash command](./system-prompts/agent-prompt-security-review-slash-command.md) (**2550** tks) - Comprehensive security review prompt for analyzing code changes with focus on exploitable vulnerabilities.
 
 #### Utilities
 
@@ -133,13 +134,13 @@ The content of various template files embedded in Claude Code.
 - [Data: Claude API reference — Ruby](./system-prompts/data-claude-api-reference-ruby.md) (**923** tks) - Ruby SDK reference including installation, client initialization, basic requests, streaming, and beta tool runner.
 - [Data: Claude API reference — TypeScript](./system-prompts/data-claude-api-reference-typescript.md) (**2881** tks) - TypeScript SDK reference including installation, client initialization, basic requests, thinking, and multi-turn conversation.
 - [Data: Claude API reference — cURL](./system-prompts/data-claude-api-reference-curl.md) (**2174** tks) - Raw API reference for Claude API for use with cURL or else Raw HTTP.
-- [Data: Claude model catalog](./system-prompts/data-claude-model-catalog.md) (**2295** tks) - Catalog of current and legacy Claude models with exact model IDs, aliases, context windows, and pricing.
+- [Data: Claude model catalog](./system-prompts/data-claude-model-catalog.md) (**2166** tks) - Catalog of current and legacy Claude models with exact model IDs, aliases, context windows, and pricing.
 - [Data: Files API reference — Python](./system-prompts/data-files-api-reference-python.md) (**1334** tks) - Python Files API reference including file upload, listing, deletion, and usage in messages.
 - [Data: Files API reference — TypeScript](./system-prompts/data-files-api-reference-typescript.md) (**797** tks) - TypeScript Files API reference including file upload, listing, deletion, and usage in messages.
-- [Data: GitHub Actions workflow for @claude mentions](./system-prompts/data-github-actions-workflow-for-claude-mentions.md) (**527** tks) - GitHub Actions workflow template for triggering Claude Code via @claude mentions.
+- [Data: GitHub Actions workflow for @claude mentions](./system-prompts/data-github-actions-workflow-for-claude-mentions.md) (**525** tks) - GitHub Actions workflow template for triggering Claude Code via @claude mentions.
 - [Data: GitHub App installation PR description](./system-prompts/data-github-app-installation-pr-description.md) (**424** tks) - Template for PR description when installing Claude Code GitHub App integration.
 - [Data: HTTP error codes reference](./system-prompts/data-http-error-codes-reference.md) (**1922** tks) - Reference for HTTP error codes returned by the Claude API with common causes and handling strategies.
-- [Data: Live documentation sources](./system-prompts/data-live-documentation-sources.md) (**3584** tks) - WebFetch URLs for fetching current Claude API and Agent SDK documentation from official sources.
+- [Data: Live documentation sources](./system-prompts/data-live-documentation-sources.md) (**3585** tks) - WebFetch URLs for fetching current Claude API and Agent SDK documentation from official sources.
 - [Data: Managed Agents client patterns](./system-prompts/data-managed-agents-client-patterns.md) (**2685** tks) - Reference guide of common client-side patterns for driving Managed Agent sessions, including stream reconnection, idle-break gating, tool confirmations, interrupts, and custom tools.
 - [Data: Managed Agents core concepts](./system-prompts/data-managed-agents-core-concepts.md) (**3208** tks) - Reference documentation for the Managed Agents API covering core concepts (Agents, Sessions, Environments, Containers), lifecycle, versioning, endpoints, and usage patterns.
 - [Data: Managed Agents endpoint reference](./system-prompts/data-managed-agents-endpoint-reference.md) (**4526** tks) - Comprehensive reference for Managed Agents API endpoints, SDK methods, request/response schemas, error handling, and rate limits.
@@ -169,7 +170,7 @@ Parts of the main system prompt.
 - [System Prompt: Agent thread notes](./system-prompts/system-prompt-agent-thread-notes.md) (**159** tks) - Behavioral guidelines for agent threads covering absolute paths, response formatting, emoji avoidance, and tool call punctuation.
 - [System Prompt: Auto mode](./system-prompts/system-prompt-auto-mode.md) (**255** tks) - Continuous task execution, akin to a background agent.
 - [System Prompt: Autonomous loop check](./system-prompts/system-prompt-autonomous-loop-check.md) (**1071** tks) - Defines behavior for autonomous timer-based invocations, guiding Claude to continue established work, maintain PRs, and handle repeated idle checks while the user is away.
-- [System Prompt: Avoiding Unnecessary Sleep Commands (part of PowerShell tool description)](./system-prompts/system-prompt-avoiding-unnecessary-sleep-commands-part-of-powershell-tool-description.md) (**182** tks) - Guidelines for avoiding unnecessary sleep commands in PowerShell scripts, including alternatives for waiting and notification.
+- [System Prompt: Avoiding Unnecessary Sleep Commands (part of PowerShell tool description)](./system-prompts/system-prompt-avoiding-unnecessary-sleep-commands-part-of-powershell-tool-description.md) (**175** tks) - Guidelines for avoiding unnecessary sleep commands in PowerShell scripts, including alternatives for waiting and notification.
 - [System Prompt: Censoring assistance with malicious activities](./system-prompts/system-prompt-censoring-assistance-with-malicious-activities.md) (**98** tks) - Guidelines for assisting with authorized security testing, defensive security, CTF challenges, and educational contexts while censoring requests for malicious activities.
 - [System Prompt: Chrome browser MCP tools](./system-prompts/system-prompt-chrome-browser-mcp-tools.md) (**156** tks) - Instructions for loading Chrome browser MCP tools via MCPSearch before use.
 - [System Prompt: Claude in Chrome browser automation](./system-prompts/system-prompt-claude-in-chrome-browser-automation.md) (**759** tks) - Instructions for using Claude in Chrome browser automation tools effectively.
@@ -211,10 +212,11 @@ Parts of the main system prompt.
 - [System Prompt: Partial compaction instructions](./system-prompts/system-prompt-partial-compaction-instructions.md) (**725** tks) - Instructions on how to compact when the user decided to compact only a portion of the conversation, with a structured summary format and analysis process.
 - [System Prompt: Phase four of plan mode](./system-prompts/system-prompt-phase-four-of-plan-mode.md) (**142** tks) - Phase four of plan mode.
 - [System Prompt: PowerShell edition for 5.1](./system-prompts/system-prompt-powershell-edition-for-51.md) (**285** tks) - System prompt for providing information about Windows PowerShell 5.1.
+- [System Prompt: REPL tool usage and scripting conventions](./system-prompts/system-prompt-repl-tool-usage-and-scripting-conventions.md) (**815** tks) - Instructs Claude on how to use the REPL tool effectively with dense JavaScript scripts, shorthands, batching rules, and API reference for investigation tasks.
 - [System Prompt: Remote plan mode (ultraplan)](./system-prompts/system-prompt-remote-plan-mode-ultraplan.md) (**617** tks) - System reminder injected during remote planning sessions that instructs Claude to explore the codebase, produce a diagram-rich plan via ExitPlanMode, and implement it with a pull request upon approval.
 - [System Prompt: Remote planning session](./system-prompts/system-prompt-remote-planning-session.md) (**432** tks) - System reminder that configures a remote planning session to explore the codebase, produce an implementation plan via ExitPlanMode, and handle plan approval, rejection, or teleportation back to the user's local terminal.
 - [System Prompt: Scratchpad directory](./system-prompts/system-prompt-scratchpad-directory.md) (**170** tks) - Instructions for using a dedicated scratchpad directory for temporary files.
-- [System Prompt: Skillify Current Session](./system-prompts/system-prompt-skillify-current-session.md) (**1882** tks) - System prompt for converting the current session in to a skill.
+- [System Prompt: Skillify Current Session](./system-prompts/system-prompt-skillify-current-session.md) (**1836** tks) - System prompt for converting the current session in to a skill.
 - [System Prompt: Subagent delegation examples](./system-prompts/system-prompt-subagent-delegation-examples.md) (**606** tks) - Provides example interactions showing how a coordinator agent should delegate tasks to subagents, handle waiting states, and report results.
 - [System Prompt: Subagent prompt-writing examples](./system-prompts/system-prompt-subagent-prompt-writing-examples.md) (**439** tks) - Provides example usage patterns demonstrating how to write self-contained, well-structured prompts when delegating tasks to subagents.
 - [System Prompt: Teammate Communication](./system-prompts/system-prompt-teammate-communication.md) (**130** tks) - System prompt for teammate communication in swarm.
@@ -268,6 +270,7 @@ Text for large system reminders.
 - [System Reminder: Plan mode is active (subagent)](./system-prompts/system-reminder-plan-mode-is-active-subagent.md) (**307** tks) - Simplified plan mode system reminder for sub agents.
 - [System Reminder: Plan mode re-entry](./system-prompts/system-reminder-plan-mode-re-entry.md) (**236** tks) - System reminder sent when the user enters Plan mode after having previously exited it either via shift+tab or by approving Claude's plan.
 - [System Reminder: Session continuation](./system-prompts/system-reminder-session-continuation.md) (**37** tks) - Notification that session continues from another machine.
+- [System Reminder: Stop hook blocking error](./system-prompts/system-reminder-stop-hook-blocking-error.md) (**20** tks) - Error from a blocking hook command.
 - [System Reminder: Task tools reminder](./system-prompts/system-reminder-task-tools-reminder.md) (**123** tks) - Reminder to use task tracking tools.
 - [System Reminder: Team Coordination](./system-prompts/system-reminder-team-coordination.md) (**250** tks) - System reminder for team coordination.
 - [System Reminder: Team Shutdown](./system-prompts/system-reminder-team-shutdown.md) (**136** tks) - System reminder for team shutdown.
@@ -293,6 +296,7 @@ Text for large system reminders.
 - [Tool Description: LSP](./system-prompts/tool-description-lsp.md) (**255** tks) - Description for the LSP tool.
 - [Tool Description: NotebookEdit](./system-prompts/tool-description-notebookedit.md) (**121** tks) - Tool description for editing Jupyter notebook cells.
 - [Tool Description: PowerShell](./system-prompts/tool-description-powershell.md) (**1455** tks) - Describes the PowerShell command execution tool with syntax guidance, timeout settings, and instructions to prefer specialized tools over PowerShell for file operations.
+- [Tool Description: REPL](./system-prompts/tool-description-repl.md) (**543** tks) - Describes the REPL tool, a JavaScript programming interface for looping, branching, and composing Claude Code tool calls as async functions.
 - [Tool Description: ReadFile](./system-prompts/tool-description-readfile.md) (**449** tks) - Tool description for reading files.
 - [Tool Description: SendMessageTool](./system-prompts/tool-description-sendmessagetool.md) (**362** tks) - Agent teams version of SendMessageTool.
 - [Tool Description: Skill](./system-prompts/tool-description-skill.md) (**326** tks) - Tool description for executing skills in the main conversation.
@@ -345,7 +349,7 @@ Text for large system reminders.
 - [Tool Description: Bash (sandbox — user permission prompt)](./system-prompts/tool-description-bash-sandbox-user-permission-prompt.md) (**14** tks) - Note that disabling sandbox will prompt user for permission.
 - [Tool Description: Bash (semicolon usage)](./system-prompts/tool-description-bash-semicolon-usage.md) (**29** tks) - Bash tool instruction: use semicolons when sequential order matters but failure does not.
 - [Tool Description: Bash (sequential commands)](./system-prompts/tool-description-bash-sequential-commands.md) (**42** tks) - Bash tool instruction: chain dependent commands with &&.
-- [Tool Description: Bash (sleep — keep short)](./system-prompts/tool-description-bash-sleep-keep-short.md) (**29** tks) - Bash tool instruction: keep sleep duration to 1-5 seconds.
+- [Tool Description: Bash (sleep — keep short)](./system-prompts/tool-description-bash-sleep-keep-short.md) (**22** tks) - Bash tool instruction: keep sleep duration to 1-5 seconds.
 - [Tool Description: Bash (sleep — no polling background tasks)](./system-prompts/tool-description-bash-sleep-no-polling-background-tasks.md) (**37** tks) - Bash tool instruction: do not poll background tasks, wait for notification.
 - [Tool Description: Bash (sleep — run immediately)](./system-prompts/tool-description-bash-sleep-run-immediately.md) (**21** tks) - Bash tool instruction: do not sleep between commands that can run immediately.
 - [Tool Description: Bash (sleep — use check commands)](./system-prompts/tool-description-bash-sleep-use-check-commands.md) (**34** tks) - Bash tool instruction: use check commands rather than sleeping when polling.
@@ -372,18 +376,17 @@ Built-in skill prompts for specialized tasks.
 - [Skill: /loop slash command](./system-prompts/skill-loop-slash-command.md) (**969** tks) - Parses user input into an interval and prompt, converts the interval to a cron expression, and schedules a recurring task.
 - [Skill: /stuck slash command](./system-prompts/skill-stuck-slash-command.md) (**964** tks) - Diagnozse frozen or slow Claude Code sessions.
 - [Skill: Agent Design Patterns](./system-prompts/skill-agent-design-patterns.md) (**1974** tks) - Reference guide covering decision heuristics for building agents on the Claude API, including tool surface design, context management, caching strategies, and composing tool calls.
-- [Skill: Build Claude API and SDK apps](./system-prompts/skill-build-claude-api-and-sdk-apps.md) (**245** tks) - Trigger rules for activating guidance when users are building applications with the Claude API, Anthropic SDKs, or Managed Agents.
-- [Skill: Build with Claude API (reference guide)](./system-prompts/skill-build-with-claude-api-reference-guide.md) (**584** tks) - Template for presenting language-specific reference documentation with quick task navigation.
-- [Skill: Building LLM-powered applications with Claude](./system-prompts/skill-building-llm-powered-applications-with-claude.md) (**7556** tks) - Guides Claude in building LLM-powered applications using the Anthropic SDK, covering language detection, API surface selection (Claude API vs Managed Agents), model defaults, thinking/effort configuration, and language-specific documentation reading.
+- [Skill: Build with Claude API (reference guide)](./system-prompts/skill-build-with-claude-api-reference-guide.md) (**591** tks) - Template for presenting language-specific reference documentation with quick task navigation.
+- [Skill: Building LLM-powered applications with Claude](./system-prompts/skill-building-llm-powered-applications-with-claude.md) (**7607** tks) - Guides Claude in building LLM-powered applications using the Anthropic SDK, covering language detection, API surface selection (Claude API vs Managed Agents), model defaults, thinking/effort configuration, and language-specific documentation reading.
 - [Skill: Computer Use MCP](./system-prompts/skill-computer-use-mcp.md) (**1206** tks) - Instructions for using computer-use MCP tools including tool selection tiers, app access tiers, link safety, and financial action restrictions.
-- [Skill: Create verifier skills](./system-prompts/skill-create-verifier-skills.md) (**2625** tks) - Prompt for creating verifier skills for the Verify agent to automatically verify code changes.
+- [Skill: Create verifier skills](./system-prompts/skill-create-verifier-skills.md) (**2551** tks) - Prompt for creating verifier skills for the Verify agent to automatically verify code changes.
 - [Skill: Debugging](./system-prompts/skill-debugging.md) (**412** tks) - Instructions for debugging an issue that the user is encountering in the Claude Code session.
 - [Skill: Dynamic pacing loop execution](./system-prompts/skill-dynamic-pacing-loop-execution.md) (**558** tks) - Step-by-step instructions for executing a dynamic pacing loop that runs tasks, arms persistent monitors for event-gated waits, schedules fallback heartbeat ticks, and handles task notifications.
 - [Skill: Schedule recurring cron and execute immediately (compact)](./system-prompts/skill-schedule-recurring-cron-and-execute-immediately-compact.md) (**173** tks) - Instructions for creating a recurring cron job, confirming the schedule with the user, and immediately executing the parsed prompt without waiting for the first cron fire.
 - [Skill: Schedule recurring cron and run immediately](./system-prompts/skill-schedule-recurring-cron-and-run-immediately.md) (**271** tks) - Converts an interval to a cron expression, schedules a recurring task via the cron creation tool, confirms to the user, and immediately executes the task without waiting for the first cron fire.
 - [Skill: Simplify](./system-prompts/skill-simplify.md) (**877** tks) - Instructions for simplifying code.
 - [Skill: Team onboarding guide](./system-prompts/skill-team-onboarding-guide.md) (**521** tks) - Template for onboarding a new teammate to a team's Claude Code setup, walking them through usage stats, setup checklists, MCP servers, skills, and team tips in a warm conversational style.
-- [Skill: Update Claude Code Config](./system-prompts/skill-update-claude-code-config.md) (**1255** tks) - Skill for modifying Claude Code configuration file (settings.json).
+- [Skill: Update Claude Code Config](./system-prompts/skill-update-claude-code-config.md) (**1190** tks) - Skill for modifying Claude Code configuration file (settings.json).
 - [Skill: Verify CLI changes (example for Verify skill)](./system-prompts/skill-verify-cli-changes-example-for-verify-skill.md) (**565** tks) - Example workflow for verifying a CLI change, as part of the Verify skill.
 - [Skill: Verify server/API changes (example for Verify skill)](./system-prompts/skill-verify-serverapi-changes-example-for-verify-skill.md) (**612** tks) - Example workflow for verifying a server/API change, as part of the Verify skill.
 - [Skill: Verify skill (runtime-verification)](./system-prompts/skill-verify-skill-runtime-verification.md) (**2696** tks) - Alias of the Verify skill registered under the /runtime-verification slash command name — identical content, different frontmatter invoke name.
