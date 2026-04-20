@@ -4,6 +4,19 @@ Note: Only use **NEW:** for entirely new prompt files, NOT for new additions/sec
 
 ### Claude Code System Prompts Changelog
 
+# [2.1.116](https://github.com/Piebald-AI/claude-code-system-prompts/commit/967c3cf)
+
+_+1,136 tokens_
+
+- **NEW:** System Reminder: Post-turn session summary — Instructs Claude to produce a structured JSON summary of a Claude Code session for inbox-style triage across multiple sessions.
+- Agent Prompt: Dream memory consolidation — Clarified that daily logs are always present (removed "if present" hedge) and documented their prefix coding (`>` user, `<` assistant, `.` tool call); added explicit `ls logs/` step and guidance to read the most recent 1–3 days.
+- Agent Prompt: /schedule slash command — Updated connector management URL from `claude.ai/settings/connectors` to `claude.ai/customize/connectors`.
+- Skill: Build with Claude API (reference guide) — Added an explicit routing entry pointing migrations and retired-model replacements to `shared/model-migration.md`.
+- Skill: Building LLM-powered applications with Claude — Added `/claude-api migrate` subcommand that dispatches to the model migration guide, with instructions to execute (not summarize) the guide starting from the scope-confirmation step and to ask for the target model if not specified.
+- Skill: Model migration guide — Added a top-of-file callout for users arriving via `/claude-api migrate` telling Claude to execute the steps in order rather than summarize them, and to start with Step 0 (confirm scope) before editing.
+- Skill: Simplify — Added "Nested conditionals" as a new hacky-pattern category (ternary chains, nested if/else, nested switch 3+ levels deep) with guidance to flatten using early returns, guard clauses, lookup tables, or if/else-if cascades.
+- Tool Description: SendMessageTool (non-agent-teams) — Expanded `attachments` documentation: entries now accept either a file path string (for files on the working filesystem) or the exact `{file_uuid, file_name, size, is_image}` object returned by a device tool like `attach_file` (passed through verbatim for user-uploaded files).
+
 # [2.1.114](https://github.com/Piebald-AI/claude-code-system-prompts/commit/15a5ca2)
 
 _+0 tokens_
