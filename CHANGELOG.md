@@ -4,6 +4,12 @@ Note: Only use **NEW:** for entirely new prompt files, NOT for new additions/sec
 
 ### Claude Code System Prompts Changelog
 
+# [2.1.141](https://github.com/Piebald-AI/claude-code-system-prompts/commit/4fc1324)
+
+_+4 tokens_
+
+- System Reminder: Output style active — Sources the per-turn reminder from a separate turn-reminder object rather than reading it directly off the output-style config, keeping the same "follow the specific guidelines" fallback wording.
+
 # [2.1.140](https://github.com/Piebald-AI/claude-code-system-prompts/commit/0082871)
 
 _+622 tokens_
